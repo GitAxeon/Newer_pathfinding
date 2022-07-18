@@ -73,8 +73,7 @@ void Application::Visualize(std::vector<ColorBGR> pixels)
 	SDL_RenderCopy(m_renderer, texture, nullptr, &r);
 	SDL_RenderPresent(m_renderer);
 
-
-	Log("Entering main loop");
+	// Keep the window open
 	SDL_Event e;
 	bool open = true;
 	while (open)
@@ -88,8 +87,6 @@ void Application::Visualize(std::vector<ColorBGR> pixels)
 			}
 		}
 	}
-
-	Log("Exiting main loop");
 }
 
 void Application::FindPath(const char* file_path)
